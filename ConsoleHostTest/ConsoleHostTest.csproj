@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WindowsSrvHost\WindowsSrvHost.csproj">
+    <ProjectReference Include="..\WindowsSrvHost\HostingLib.csproj">
       <Project>{a9ac9996-721e-4bc2-8c11-10c64034b1fa}</Project>
-      <Name>WindowsSrvHost</Name>
+      <Name>HostingLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

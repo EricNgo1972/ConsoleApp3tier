@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp3tier", "ConsoleA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BOL", "BOL\BOL.csproj", "{1B7A7882-3FD7-4581-8DB6-EE04EFA3D969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsSrvHost", "WindowsSrvHost\WindowsSrvHost.csproj", "{A9AC9996-721E-4BC2-8C11-10C64034B1FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostingLib", "WindowsSrvHost\HostingLib.csproj", "{A9AC9996-721E-4BC2-8C11-10C64034B1FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHostTest", "ConsoleHostTest\ConsoleHostTest.csproj", "{EA6B7709-C6F4-4F44-A887-B6A203C38AA0}"
 EndProject
