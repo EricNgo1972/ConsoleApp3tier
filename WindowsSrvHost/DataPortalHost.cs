@@ -26,7 +26,12 @@ namespace WindowsSrvHost
 
             _netService = new ServiceHost(typeof(Csla.Server.Hosts.WcfPortal), new Uri(_url));
 
-            ServiceEndpoint ep = _netService.AddServiceEndpoint(typeof(IWcfPortal), new WebHttpBinding(), "");
+            
+            // Enable metadata publishing.
+            ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+            smb.HttpGetEnabled = true;
+            smb.MetadataExporter.PolicyVersion = PolicyVersion.Policy15;
+            _netService.Description.Behaviors.Add(smb);
 
 
             _netService.Open();
