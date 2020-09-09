@@ -18,7 +18,7 @@ namespace SPC.UI
             Csla.ApplicationContext.DataPortalProxy = typeof(Csla.DataPortalClient.HttpProxy).AssemblyQualifiedName;
 
             Csla.ApplicationContext.DataPortalUrlString = AppHostUrl;
-
+             
 
         }
 
