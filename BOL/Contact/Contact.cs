@@ -34,26 +34,8 @@ namespace SPC
             set { SetProperty(ContactTypeProperty, value); }
         }
 
-
         #endregion
-
-        #region Rules
-
-        protected override void AddBusinessRules()
-        {
-            base.AddBusinessRules();
-
-            // TODO: add business rules
-        }
-
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public static void AddObjectAuthorizationRules()
-        {
-            // TODO: add object-level authorization rules
-        }
-
-
-        #endregion
+        
 
         #region Factory
 

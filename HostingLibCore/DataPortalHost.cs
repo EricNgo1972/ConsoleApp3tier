@@ -24,7 +24,7 @@ namespace WindowsSrvHost
 
             _url = "http://localhost:8001/";//ConfigurationManager.AppSettings["NetDataPortalUri"];
 
-            _netService = new ServiceHost(typeof(Csla.Server.Hosts.WcfPortal), new Uri(_url));
+            _netService = new ServiceHost(typeof(Csla.Server.Hosts.RemotingPortal), new Uri(_url));
 
             _netService.UnknownMessageReceived += MessageReceived;
 

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SPC
 {
@@ -9,9 +10,15 @@ namespace SPC
     public class ContactInfoList : Csla.ReadOnlyListBase<ContactInfoList, ContactInfo>
     {
 
+        public async static Task<ContactInfoList> GetInfoListAsync(Dictionary<string, string> filters)
+        {
+            return await DataPortal.FetchAsync<ContactInfoList>(new Criteria() { Filters = filters});
+            
+        }
         public static ContactInfoList GetInfoList(Dictionary<string, string> filters)
         {
-            return DataPortal.Fetch<ContactInfoList>(new Criteria() { Filters = filters});
+            return  DataPortal.Fetch<ContactInfoList>(new Criteria() { Filters = filters});
+
         }
 
 
@@ -25,8 +32,6 @@ namespace SPC
                 set { LoadProperty(FiltersProperty, value); }
             }
         }
-
-
 
         #region Data Access
 
@@ -42,9 +47,7 @@ namespace SPC
             }
             IsReadOnly = true;
 
-
         }
-        
 
         #endregion
 

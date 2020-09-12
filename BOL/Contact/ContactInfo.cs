@@ -1,8 +1,5 @@
 ﻿using Csla;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
 
 namespace SPC
 {
@@ -33,9 +30,19 @@ namespace SPC
         internal static ContactInfo GeneratedSampleContactInfo(int Index)
         {
             var rand = new Random();
-            return new ContactInfo() { ContactCode = $"G{string.Format("{0:000}",Index)}", Name = $"Contact with auto generated name {rand.Next()}" , ContactType ="TEST" };
-            
+
+            //var ret = DataPortal.Create<ContactInfo>();
+            //ret.ContactCode = $"G{string.Format("{0:000}", Index)}";
+            //ret.Name = $"Contact with auto generated name {rand.Next()}";
+            //ret.ContactType = "TEST";
+
+            return   new ContactInfo() { ContactCode = $"G{string.Format("{0:000}",Index)}", Name = $"Contact with auto generated name {rand.Next()}" , ContactType ="TEST" };
+
+            //return ret;
         }
+
+        //[Create, RunLocal]
+        private void Create() { }
     }
 
 
