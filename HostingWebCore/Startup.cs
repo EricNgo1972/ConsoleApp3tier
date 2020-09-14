@@ -28,8 +28,7 @@ namespace HostingWebCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-           
+                       
             // If using Kestrel:
             services.Configure<KestrelServerOptions>(options =>
             {
@@ -44,8 +43,7 @@ namespace HostingWebCore
 
             services.AddHttpContextAccessor();
 
-
-           // services.AddCsla();
+            services.AddCsla();
         }
 
 
@@ -68,7 +66,7 @@ namespace HostingWebCore
                 endpoints.MapControllers();
             });
 
-           // app.UseCsla();
+            app.UseCsla();
         }
     }
 }

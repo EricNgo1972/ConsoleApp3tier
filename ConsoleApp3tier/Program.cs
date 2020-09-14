@@ -1,5 +1,6 @@
 ﻿using SPC.UI;
 using System;
+using System.Security.Claims;
 
 namespace SPC.UI
 {
@@ -11,29 +12,27 @@ namespace SPC.UI
             ServiceConfig.Init();
 
             Console.WriteLine("Console 3 tier test.");
-            Console.WriteLine("----------------------");
+            Console.WriteLine("");
 
             try
             {
-                var login = new Csla.Security.CslaClaimsPrincipal(  Csla.Security.UnauthenticatedIdentity.UnauthenticatedIdentity()) ;
+                var login = new ClaimsPrincipal(new ClaimsIdentity("User"));
 
                 Csla.ApplicationContext.User = login;
 
-
-                var list =  SPC.ContactInfoList.GetInfoListAsync(null).Result;
-                //var list = SPC.ContactInfoList.GetInfoList(null);
-
-                foreach (var item in list)
-                {
-                    Console.WriteLine($"  - {item.ContactCode}. {item.Name}. {item.ContactType}");
-                }
-
-                Console.WriteLine("-----------------End of Contacts-------------------");
-
+                Console.WriteLine("----------Async------------");
                 var plist = SPC.PersonInfoList.GetInfoListAsync(null).Result;
-                
+
 
                 foreach (var item in plist)
+                {
+                    Console.WriteLine($"  - {item.EmplCode}. {item.Name}. ");
+                }
+
+                Console.WriteLine("----------Sync------------");
+
+                var plist2 = SPC.PersonInfoList.GetInfoList(null);
+                foreach (var item in plist2)
                 {
                     Console.WriteLine($"  - {item.EmplCode}. {item.Name}. ");
                 }
@@ -41,11 +40,10 @@ namespace SPC.UI
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine(ex.ToString());
-
             }
-                Console.ReadKey();
+
+            Console.ReadKey();
 
 
         }

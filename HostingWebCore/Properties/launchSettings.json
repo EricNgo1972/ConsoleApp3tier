@@ -2,27 +2,31 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost:8000/WeatherForecast",
+      "sslPort": 0
+    },
     "iisExpress": {
-      "applicationUrl": "http://localhost:8001",
+      "applicationUrl": "http://localhost:8000/WeatherForecast",
       "sslPort": 0
     }
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
     "IIS Express": {
-      "commandName": "IISExpress",
-      "launchUrl": "",
+      "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "HostingWebCore": {
       "commandName": "Project",
-      "launchUrl": "",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:8000/WeatherForecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:8001;http://localhost:8000"
+      "applicationUrl": "http://localhost:8000;https://localhost:8005"
     }
   }
 }

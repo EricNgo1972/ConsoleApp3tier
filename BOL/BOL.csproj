@@ -6,7 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSLA-Core" Version="4.11.2" />
+    <Compile Remove="Contact\ContactInfoList.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Csla" Version="5.3.1" />
   </ItemGroup>
 
 </Project>
