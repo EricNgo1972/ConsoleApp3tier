@@ -22,11 +22,11 @@
     "HostingWebCore": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:8000/WeatherForecast",
+      "launchUrl": "http://t470-01:8000/WeatherForecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:8000;https://localhost:8005"
+      "applicationUrl": "http://t470-01:8000"
     }
   }
 }
