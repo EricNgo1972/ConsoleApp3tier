@@ -22,8 +22,7 @@ namespace TestPortal
         {
             base.OnAppearing();
 
-            try
-            {
+            
                 var login = new ClaimsPrincipal(new ClaimsIdentity());
                 Csla.ApplicationContext.User = login;
 
@@ -31,11 +30,7 @@ namespace TestPortal
 
                 var list2 =  PersonInfoList.GetInfoList(null);
 
-            }
-            catch (Exception ex)
-            {
-                var msg = ex.Message;
-            }
+           
         }
     }
 }
